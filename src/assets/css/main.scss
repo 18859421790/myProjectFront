@@ -1,0 +1,43 @@
+@import './constant.scss';
+@import './media.scss';
+
+body {
+  margin: 0px;
+  padding: 0px;
+  background: $theme-color3;
+  color: $theme-color5;
+}
+
+html {
+  filter: var(--html-filter);
+}
+
+.light {
+  --bg-color-dark: --bg-color-light;
+  --text-color-dark: --text-color-light;
+}
+
+.dark {
+  --bg-color-light: red;
+  --text-color-light: --text-color-dark;
+}
+
+.hr-class {
+  margin: 20px 0;
+  height: 4px;
+  border: 0;
+  background-color: $theme-color4;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    #fff,
+    #fff 4px,
+    transparent 0,
+    transparent 8px
+  );
+}
+
+/* 解决el-dialog的抖动问题 */
+.el-popup-parent--hidden {
+  overflow: auto !important;
+  padding-right: 0 !important;
+}
